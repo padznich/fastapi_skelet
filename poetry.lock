@@ -1,0 +1,51 @@
+[[package]]
+category = "main"
+description = "A backport of the dataclasses module for Python 3.6"
+marker = "python_version < \"3.7\""
+name = "dataclasses"
+optional = false
+python-versions = "*"
+version = "0.6"
+
+[[package]]
+category = "main"
+description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+name = "fastapi"
+optional = false
+python-versions = ">=3.6"
+version = "0.44.1"
+
+[package.dependencies]
+pydantic = ">=0.32.2,<2.0.0"
+starlette = "0.12.9"
+
+[[package]]
+category = "main"
+description = "Data validation and settings management using python 3.6 type hinting"
+name = "pydantic"
+optional = false
+python-versions = ">=3.6"
+version = "1.2"
+
+[package.dependencies]
+[package.dependencies.dataclasses]
+python = "<3.7"
+version = ">=0.6"
+
+[[package]]
+category = "main"
+description = "The little ASGI library that shines."
+name = "starlette"
+optional = false
+python-versions = ">=3.6"
+version = "0.12.9"
+
+[metadata]
+content-hash = "0b2c9f7c3774e38769879a258c9688e683265bb7087a2bd2acfe0b88f1547078"
+python-versions = "^3.6"
+
+[metadata.hashes]
+dataclasses = ["454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f", "6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84"]
+fastapi = ["04afe17ceaaa6c07a0377c2d2cafde864672f0489b5be21030e3d6ca2e47b0ac", "5e053824ffbdd7041812f4c77e6def17a557edc12f4fb061e00d7ee9a03aca3b"]
+pydantic = ["1c2df10aca600a23e7310df7ee62bc8024e4bfc6a444bc4d38c7b095b0cc8f79", "29669232b21a0fe45ada7c183198129af8447e12d0b6e727098ce57c3c8df320", "320578dc67bd6854675a34ddda7a2519cf7132f08c0a376d43f5eb64bd052ca7", "326ebef3ffed3ec20bd92a3d75c175333a3295e97b26f41cc2eb04ef76725aa2", "3adcf1cb80d7fe665d4a87e49b47285c9802762cce57fa85ce41a9d2a198f2b0", "4338e598ae11ae236aec596a975d9b88c9c40c9406193a53064c01682aa2a6d3", "45d2ea27997fff4cb5916a97705403edf82ecabe8d79ef31f6069b7f1391c3df", "539fe3a2d231bf7be7bb50c2e8dd1bc61eff2f66ed1a26307eef6a4e5902f33a", "56f138161da9bde0e6d0301e7921856e89e02eefde22c8001e9aaa2335c26444", "67a3128260b268fba0e0e0ce8e8353022a68b223062ae218e8f0b8f74324d797", "c67c2239fab51a65d09e8859423f6b8ce5b4c76f0be4bf61ed22621774ef146a", "da10b034750addbd95a328654d20364c479f4e2e26e0f72933204d61cbc8fa78", "de0624545e13a5eb09ab4fbd7076e4beced5aff2cd56097264c5f740f4b5fd39", "fb6a5ddf762c594e6038af30fd3dc843f1238d60b5d477734fbc4b24cc1b87b9"]
+starlette = ["c2ac9a42e0e0328ad20fe444115ac5e3760c1ee2ac1ff8cdb5ec915c4a453411"]
