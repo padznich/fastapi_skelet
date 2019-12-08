@@ -14,7 +14,7 @@ router = APIRouter()
 
 
 @router.get('/', response_model=List[User])
-def read_users(skip: int = 0, limit: int = 100):
+async def read_users(skip: int = 0, limit: int = 100):
     """
     Retrieve users.
     """
@@ -31,7 +31,7 @@ def read_users(skip: int = 0, limit: int = 100):
 
 
 @router.get('/{user_id}', response_model=User)
-def read_user(user_id: int, q: str = None):
+async def read_user(user_id: int, q: str = None):
     """
     Retrieve user by id.
     """
@@ -46,7 +46,7 @@ def read_user(user_id: int, q: str = None):
 
 
 @router.put('/{user_id}', response_model=User)
-def update_user(user_id: int, user: User):
+async def update_user(user_id: int, user: User):
     """
     Update user by id.
     """
@@ -55,7 +55,7 @@ def update_user(user_id: int, user: User):
 
 
 @router.delete('/{user_id}', response_model=int)
-def remove_user(user_id: int):
+async def remove_user(user_id: int):
     """
     Remove user by id.
     """
@@ -64,7 +64,7 @@ def remove_user(user_id: int):
 
 
 @router.post('/', response_model=User)
-def add_user(user: UserBase):
+async def add_user(user: UserBase):
     """
     Add user
     """
@@ -74,7 +74,7 @@ def add_user(user: UserBase):
 
 
 @router.get("/search/", response_model=List[User])
-def search_users(q: str = None, skip: int = 0, limit: int = 100):
+async def search_users(q: str = None, skip: int = 0, limit: int = 100):
     """
     Search users, use Bleve Query String syntax:
     http://blevesearch.com/docs/Query-String-Query/
